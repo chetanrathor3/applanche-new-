@@ -1,0 +1,58 @@
+<div class="container" style="">
+    <div class="container-fluid" style="max-width: 976px">
+      <form #addTeamForm="ngForm" (ngSubmit)="addTeam(addTeamForm.value)">
+      <div class="row align-content-center" style="height: 65px">
+        <h3 style="">Add Team</h3>
+      </div>
+      <div class="row align-content-center" style="height: 154px">
+        <h3 class="add-Projects-heading">Team Image</h3>
+          <label for="imageupload">
+            <div class="uploader">
+              <img src="../assets/upload.png" class="img-style" />
+              <h3 class="upload-image-heading">Upload Image</h3>
+              <input
+                id="imageupload"
+                style="height: 100%; display: none; width: 100%"
+                type="file"
+                src=""
+                alt=""
+                name="teamImage"
+                ngModel
+               
+              />
+            </div>
+          </label>
+        
+      </div>
+      <div class="row">
+        <div
+          class="col-12 d-flex flex-column justify-content-between text-and-input-style"
+        >
+          <label for="team-name">Team Name</label>
+          <input class="w-100 input-height" type="text" ngModel  name="teamName" id="team-name" />
+        </div>
+        <div class="row">
+          <div
+            class="col-12 d-flex flex-column justify-content-between text-and-input-style"
+          >
+            <label for="Team-Designation">Team Designation</label>
+            <input
+              class="w-100 input-height"
+              type="text"
+              name="teamDesignation"
+              id="Team-Designation"
+              ngModel
+            />
+          </div>          
+          <div class="row justify-content-end">
+            <div class="col-3 d-flex flex-column justify-content-center button-container ">
+              <input type="submit"  class="bt-style" value="Add Team">
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+  
