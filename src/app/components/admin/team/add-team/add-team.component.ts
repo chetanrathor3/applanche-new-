@@ -16,6 +16,8 @@ export class AddTeamComponent implements OnInit {
 
   addTeam(data:any){
     this.team.insertTeam(data).subscribe((data)=>{
+      console.log(data);
+      
     })
     this.router.navigate(['adminIndex/teamList'])
 

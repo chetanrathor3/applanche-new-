@@ -15,48 +15,15 @@
          
         
          
-          <tr style="height:80px; ">
-            <td class="table-content" >Mark</td>
-            <td class="table-content">Otto</td>
-            <td class="table-content">@mdo</td>
-            <td class="table-content">@mdo</td>
-            <td class="table-content">@mdo</td>
+
+          <tr *ngFor="let teamMember of teamslistvar" style="height:80px; ">
+            <td class="table-content" >{{teamMember.teamName}}</td>
+            <td class="table-content" >{{teamMember._id}}</td>
+            <td class="table-content" >{{teamMember.teamDesignation}}</td>
+            <button class="btn btn-primary" (click)="deleteTeam(teamMember._id)">Delete</button>
           </tr>
-          <tr style="height:80px; ">
-            <td class="table-content" >Mark</td>
-            <td class="table-content">Otto</td>
-            <td class="table-content">@mdo</td>
-            <td class="table-content">@mdo</td>
-            <td class="table-content">@mdo</td>
-          </tr>
-          <tr style="height:80px; ">
-            <td class="table-content" >Mark</td>
-            <td class="table-content">Otto</td>
-            <td class="table-content">@mdo</td>
-            <td class="table-content">@mdo</td>
-            <td class="table-content">@mdo</td>
-          </tr>
-          <tr style="height:80px; ">
-            <td class="table-content" >Mark</td>
-            <td class="table-content">Otto</td>
-            <td class="table-content">@mdo</td>
-            <td class="table-content">@mdo</td>
-            <td class="table-content">@mdo</td>
-          </tr>
-          <tr style="height:80px; ">
-            <td class="table-content" >Mark</td>
-            <td class="table-content">Otto</td>
-            <td class="table-content">@mdo</td>
-            <td class="table-content">@mdo</td>
-            <td class="table-content">@mdo</td>
-          </tr>
-          <tr style="height:80px; ">
-            <td class="table-content" >Mark</td>
-            <td class="table-content">Otto</td>
-            <td class="table-content">@mdo</td>
-            <td class="table-content">@mdo</td>
-            <td class="table-content">@mdo</td>
-          </tr>
+          
+          
           
         </tbody>
       </table>

@@ -30,7 +30,7 @@
                             Email To Us
                         </h3>
                         <h6 class="sm2-small-heading">
-                            Info@applanche.com
+                           <a href="mailto://Info@applanche.com"> Info@applanche.com</a>
                         </h6>
                     </div>
                 </div>
@@ -43,10 +43,10 @@
                     </div>
                     <div class="col-10">
                         <h3 class="sm-small-heading">
-                            Call To Us
+                           Call To Us
                         </h3>
                         <h6 class="sm2-small-heading">
-                            (702) 555 121
+                            <a href="tel://702555121"> (702) 555 121</a>
                         </h6>
                     </div>
                 </div>
@@ -62,7 +62,8 @@
                             Meet Us
                         </h3>
                         <h6 class="sm2-small-heading">
-                            2118 Thornridge Cir. Syracuse, 6610 Mooretown Rd Vermont Connecticut 35624
+                           <a  target="_blank" href="https://goo.gl/maps/4z7uWviBx2EAmpJN6"> 2118 Thornridge Cir. Syracuse, 6610 Mooretown Rd Vermont Connecticut 35624
+                            </a>
                         </h6>
                     </div>
                 </div>
@@ -83,12 +84,14 @@
             <h1 class="heading" style="text-align: left;">
                 Connect With Us
             </h1>
+            <form  #contact="ngForm" (ngSubmit)="getQuery(contact.value)" >
             <div class="container-fluid d-flex flex-column justify-content-around " style="height: 410px;">
-                <input placeholder="Full Name" class="input-style" type="text" name="" id="">
-                <input placeholder="Email" class="input-style" type="email" name="" id="">
-                <input placeholder="Query" class="input-style" type="text" name="s" id="" style="height: 140px;">
-                <input class="input-style" value="Submit" type="button" name="s" id="" style="color:#ffff; background-color:#004FFF;">
+                <input ngModel name="queryName"   placeholder="Full Name" class="input-style" required type="text"  id="">
+                <input ngModel name="queryEmail" placeholder="Email" class="input-style" type="email" id="">
+                <input ngModel name="queryDescription" placeholder="Query" class="input-style" type="text"  id="" style="height: 140px;">
+                <input name="querySubmit" class="input-style" value="Submit" type="submit"  id="" style="color:#ffff; background-color:#004FFF;">
             </div>
+        </form>
         </div>
         <div class="col-6 p-0" style="height:610px ; width: 491px;">
             <img src="../assets/call girll.png" style="width:100% ;height: 100%;" alt="">

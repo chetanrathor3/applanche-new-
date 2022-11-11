@@ -1,5 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, Scroll } from '@angular/router';
 import { AdminIndexComponent } from './components/admin/admin-index/admin-index.component';
 import { AddBlogComponent } from './components/admin/blog/add-blog/add-blog.component';
 import { BlogListComponent } from './components/admin/blog/blog-list/blog-list.component';
@@ -25,6 +25,7 @@ const routes: Routes = [
  {
   path:'',
   component:MainIndexComponent,
+  
   children:[
     {
       path:'index',
@@ -97,7 +98,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{scrollPositionRestoration:'enabled'})],
+ 
+
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

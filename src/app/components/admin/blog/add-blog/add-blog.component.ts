@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
+import { BlogService } from 'src/app/services/Blog/blog.service';
 import { InsertBlogService } from 'src/app/services/insert-blog.service';
 
 @Component({
@@ -9,14 +10,14 @@ import { InsertBlogService } from 'src/app/services/insert-blog.service';
 })
 export class AddBlogComponent implements OnInit {
 
-  constructor(private insert:InsertBlogService, private router: Router) { }
+  constructor(private blogServ:BlogService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   insertoneBlog(data:any){
     // console.warn(data);
-    this.insert.insertBlog(data).subscribe((data)=>{
+    this.blogServ.insertBlog(data).subscribe((data)=>{
      console.log(data);
     })
     this.router.navigate(['adminIndex/bloglist'])

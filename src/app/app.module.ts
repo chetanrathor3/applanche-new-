@@ -31,7 +31,13 @@ import { MainIndexComponent } from './components/users/main-index/main-index.com
 import { MainBlogComponent } from './components/users/main-blog/main-blog.component';
 import { TeamListComponent } from './components/admin/team/team-list/team-list.component';
 import { AddTeamComponent } from './components/admin/team/add-team/add-team.component';
-
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardFooter, MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalForQueryComponent } from './components/users/modal-for-query/modal-for-query.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +67,7 @@ import { AddTeamComponent } from './components/admin/team/add-team/add-team.comp
     MainBlogComponent,
     TeamListComponent,
     AddTeamComponent,
+    ModalForQueryComponent,
     // MainIndexComponent,
     // InsertBlogComponent,
    
@@ -70,7 +77,14 @@ import { AddTeamComponent } from './components/admin/team/add-team/add-team.comp
     AppRoutingModule,
     FormsModule,
     GoogleMapsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule,
+    MatButtonModule,
+  
+    MatFormFieldModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
+    MatCardModule
     
     
     
