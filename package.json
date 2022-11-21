@@ -23,7 +23,9 @@
     "@angular/router": "^14.2.0",
     "@types/googlemaps": "^3.43.3",
     "bootstrap": "^5.2.2",
+    "jquery": "^3.6.1",
     "rxjs": "~7.5.0",
+    "tether": "^2.0.0",
     "tslib": "^2.3.0",
     "typeface-inter": "^3.18.1",
     "zone.js": "~0.11.4"

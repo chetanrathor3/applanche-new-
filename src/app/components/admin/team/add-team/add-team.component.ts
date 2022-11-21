@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
 import { InsertBlogService } from 'src/app/services/insert-blog.service';
+import { TeamService } from 'src/app/services/Team/team.service';
 
 @Component({
   selector: 'app-add-team',
@@ -9,7 +10,7 @@ import { InsertBlogService } from 'src/app/services/insert-blog.service';
 })
 export class AddTeamComponent implements OnInit {
 
-  constructor(private team:InsertBlogService, private router : Router) { }
+  constructor(private team:TeamService, private router : Router) { }
 
   ngOnInit(): void {
   }
