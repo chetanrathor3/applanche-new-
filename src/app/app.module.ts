@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -38,6 +38,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalForQueryComponent } from './components/users/modal-for-query/modal-for-query.component';
+import { PortfolioComponent } from './components/users/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { ModalForQueryComponent } from './components/users/modal-for-query/modal
     TeamListComponent,
     AddTeamComponent,
     ModalForQueryComponent,
+    PortfolioComponent,
     // MainIndexComponent,
     // InsertBlogComponent,
    
@@ -84,7 +86,9 @@ import { ModalForQueryComponent } from './components/users/modal-for-query/modal
     MatFormFieldModule,
     MatDialogModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    ReactiveFormsModule
     
     
     

@@ -16,6 +16,8 @@ projectsSerCon2 : any
     this.projectSer.fetchProjects().subscribe((data)=>{
       // console.log(data);
       this.projectsSerCon = data
+      console.log(this.projectsSerCon);
+      
       this.projectsSerCon2 = data
       
     })

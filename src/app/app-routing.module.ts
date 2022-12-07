@@ -15,6 +15,7 @@ import { IndexCardComponent } from './components/users/index-card/index-card.com
 import { IndexComponent } from './components/users/index/index.component';
 import { MainIndexComponent } from './components/users/main-index/main-index.component';
 import { MeetTheTeamComponent } from './components/users/meet-the-team/meet-the-team.component';
+import { PortfolioComponent } from './components/users/portfolio/portfolio.component';
 
 const routes: Routes = [
  {
@@ -33,7 +34,7 @@ const routes: Routes = [
     },
     {
       path:'portfolio',
-      component:IndexCardComponent,
+      component:PortfolioComponent,
     },
     {
       path:'blog',

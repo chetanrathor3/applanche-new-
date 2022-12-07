@@ -1,6 +1,6 @@
 <div class="container" style="">
   <div class="container-fluid" style="max-width: 976px">
-    <form #addProjectForm="ngForm" (ngSubmit)="addProject(addProjectForm.value)" method="post">
+    <form [formGroup]="addProjectForm" (ngSubmit)="addProject()">
     <div class="row align-content-center" style="height: 65px">
       <h3 style="">Add Projectss</h3>
     </div>
@@ -13,12 +13,12 @@
             <input
               id="imageupload"
               style="height: 100%; display: none; width: 100%"
-              type="file"
+              
               src=""
               alt=""
               name="projectImage"
-              ngModel
-             
+              
+             formControlName="projectImage"
             />
           </div>
         </label>
@@ -29,7 +29,14 @@
         class="col-12 d-flex flex-column justify-content-between text-and-input-style"
       >
         <label for="Projects-title">Projects Title</label>
-        <input class="w-100 input-height" type="text" ngModel  name="projectTitle" id="Projects-title" />
+        <input   formControlName="projectTitle" class="w-100 input-height" type="text"   name="projectTitle" id="Projects-title" />
+      </div>
+    <div class="row">
+      <div
+        class="col-12 d-flex flex-column justify-content-between text-and-input-style"
+      >
+        <label for="Projects-name">Projects Name</label>
+        <input   formControlName="projectName" class="w-100 input-height" type="text"   name="projectName" id="Projects-Name" />
       </div>
       <div class="row">
         <div
@@ -41,20 +48,21 @@
             type="text"
             name="projectCategory"
             id="Projects-title"
-            ngModel
+            formControlName="projectCategory"
           />
         </div>
         <div class="row">
           <div
             class="col-12 d-flex flex-column justify-content-between Projects-description"
           >
-            <label for="Projects-title">Projects Description</label>
+            <label for="Projects-description">Projects Description</label>
             <input
               class="w-100 input-height2"
               type="text"
               name="projectDescription"
-              id="Projects-title"
-              ngModel
+              id="Projects-description"
+              
+              formControlName="projectDescription"
             />
           </div>
         </div>
@@ -67,6 +75,6 @@
         
       </div>
     </div>
-    </form>
   </div>
+</form>
 </div>

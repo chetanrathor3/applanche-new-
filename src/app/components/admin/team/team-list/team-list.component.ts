@@ -1,5 +1,7 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
+import { map } from 'rxjs';
 import { InsertBlogService } from 'src/app/services/insert-blog.service';
+import { TeamService } from 'src/app/services/Team/team.service';
 
 @Component({
   selector: 'app-team-list',
@@ -8,22 +10,30 @@ import { InsertBlogService } from 'src/app/services/insert-blog.service';
 })
 export class TeamListComponent implements OnInit {
   teamslistvar: any = '';
-  constructor(private team: InsertBlogService) {}
+  data! : {
+    _id:string
+  }
+  constructor(private team: TeamService) {}
 
   ngOnInit(): void {
-    this.team.fetchTeams().subscribe((data) => {
-      this.teamslistvar = data;
+    this.team.fetchTeams().pipe(map((response)=>{
+      let zero:[]= []
+     
+      return zero;
+    })).subscribe((data) => {
     });
   }
 
-  deleteTeam(id: any) {
-    this.team.deleteTeamMember(id).subscribe((data) => {
-      console.warn();
+  deleteTeam(id: string) {
+   this.data = {
+    _id:id
+   }
+   console.warn(this.data);
+    this.team.deleteTeamMember(this.data).subscribe((data) => {
+    
 
-      console.log(data);
-      this.team.fetchTeams().subscribe((data) => {
-        this.teamslistvar = data;
-      });
+      // console.log(data);
+     
     });
   }
 }
